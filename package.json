@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "https://github.com/luscus/sfss.lib",
   "author": "https://github.com/luscus/sfss.lib/graphs/contributors",
-  "description": "Simple FS Store Library enable a node app to store/retieve JSON objects to/from the filesystem",
+  "description": "Simple FS Storage Library enable a node app to store/retieve JSON objects to/from the filesystem",
   "keywords": [
     "sfss.lib",
     "store",
