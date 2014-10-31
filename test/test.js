@@ -1,41 +1,66 @@
 var _id = new Date().getTime();
 
 
-var doc = {
+var SimpleFsStorage = require('../lib/sfss.lib'),
+    doc = {
       id: _id,
       type: 'testDoc',
       property: 'bla'
     },
-    SimpleFsStorage = require('../lib/sfss.lib'),
     lib = new SimpleFsStorage({
       root: __dirname + '/' + 'root'
     });
 
-console.log(lib);
 
 
+lib.writeFile('test/2/3/4/'+ doc.id +'.json', doc)
+.then(function (result) {
+  console.log('-- WRITE TEST ----------------------');
+  console.log(result);
+})
+.catch(function (error) {
+  console.log('-- WRITE TEST ----------------------');
+  console.log(error.stack);
+});
 
-console.log('-- WRITE TEST ----------------------');
-lib.writeDoc('test/2/3/4', doc)
-.catch(console.error);
+
+lib.readFile('test/2/3/4/'+ doc.id +'.json')
+.then(function (result) {
+  console.log('-- READ TEST -----------------------');
+  console.log(result);
+})
+.catch(function (error) {
+  console.log('-- READ TEST -----------------------');
+  console.log(error.stack);
+});
+
+lib.readDirectory('test/2/3/4')
+.then(function (result) {
+  console.log('-- READ DIRECTORY TEST -------------');
+  console.log(result);
+})
+.catch(function (error) {
+  console.log('-- READ DIRECTORY TEST -------------');
+  console.log(error.stack);
+});
 
 
-console.log('-- READ TEST -----------------------');
-lib.readDoc('test/'+ doc.id +'.json')
-.then(console.log)
-.catch(console.error);
+lib.readFileBulk('test/2/3/4')
+.then(function (result) {
+  console.log('-- BULK READ TEST ------------------');
+  console.log(result);
+})
+.catch(function (error) {
+  console.log('-- BULK READ TEST ------------------');
+  console.log(error.stack);
+});
 
-console.log('-- BULK READ TEST ------------------');
-lib.readDocs('test')
-.then(console.log)
-.catch(console.error);
-
-console.log('-- READ DIRECTORY TEST -------------');
-lib.readDirectoryContent('')
-.then(console.log)
-.catch(console.error);
-
-console.log('-- NEGATIVE READ TEST --------------');
-lib.readDoc('test/doesNotExist.json')
-.then(console.log)
-.catch(console.error);
+lib.readFile('test/doesNotExist.json')
+.then(function (result) {
+  console.log('-- NEGATIVE READ TEST --------------');
+  console.log(result);
+})
+.catch(function (error) {
+  console.log('-- NEGATIVE READ TEST --------------');
+  console.log(error);
+});
