@@ -15,11 +15,19 @@ Stores each handled JSON Document as a .json file on the file system.
 ### Options
 
 - `root (mandatory)`: {String} absolut path to the root directory of the store.
-- `strict`: {Boolean} if true, directories will have to be created using `createDirectory`.
-- `extentions`: {ArrayString} holds the allowed file extentions. Default is: ['json']
+- `strict`: {Boolean} if true, directories will have to be created using `createDirectory`. Default is: `false`
+- `extentions`: {ArrayString} holds the allowed file extentions. Default is: `['json']`
 
 
 ## API
+
+### createDirectory
+
+Creates a single directory - and if `strict` mode is disabled, any missing parent as well.
+
+Parameter:
+- `dirPath`: {String} relative directory path
+
 
 ### readDirectory
 
@@ -27,14 +35,6 @@ Returns an Array holding only subdirectories and JSON files of the specified dir
 
 Parameter:
 - `dirPath`: {String} relative directory path
-
-### createDirectory
-
-Returns an Array holding only subdirectories and JSON files of the specified directory.
-
-Parameter:
-- `dirPath`: {String} relative directory path
-
 
 
 ### readFile
@@ -60,7 +60,7 @@ Parameter
 
 Writes a document at the specified location.
 
-If the specified directory does not exist, it will be created by the method - and if `strict` mode is disable, any missing parent as well.
+If the specified directory does not exist, it will be created by the method - and if `strict` mode is disabled, any missing parent as well.
 
 Parameters
 - `filePath`: {String} relative directory path and file name

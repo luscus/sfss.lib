@@ -13,6 +13,16 @@ var SimpleFsStorage = require('../lib/sfss.lib'),
 
 
 
+lib.createDirectory(doc.id.toString())
+.then(function (result) {
+  console.log('-- CREATE DIR TEST ----------------------');
+  console.log(result);
+})
+.catch(function (error) {
+  console.log('-- CREATE DIR TEST ----------------------');
+  console.log(error.stack);
+});
+
 lib.writeFile('test/2/3/4/'+ doc.id +'.json', doc)
 .then(function (result) {
   console.log('-- WRITE TEST ----------------------');
