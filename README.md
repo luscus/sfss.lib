@@ -1,5 +1,6 @@
 # Simple FS Storage Library
-[![dependencies](https://david-dm.org/luscus/sfss.lib.png)](https://david-dm.org/luscus/sfss.lib)
+[![NPM version](https://badge.fury.io/js/sfss.lib.svg)](http://badge.fury.io/js/prototype-less)
+[![dependencies](https://david-dm.org/luscus/sfss.lib.svg)](https://david-dm.org/luscus/sfss.lib)
 [![devDependency Status](https://david-dm.org/luscus/sfss.lib/dev-status.svg?theme=shields.io)](https://david-dm.org/luscus/sfss.lib#info=devDependencies)
 
 Stores each handled JSON Document as a .json file on the file system.
