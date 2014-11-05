@@ -37,6 +37,14 @@ Parameter:
 - `dirPath`: {String} relative directory path
 
 
+### deleteDirectory
+
+Deep deletion of a directory (like rm -rf).
+
+Parameter:
+- `dirPath`: {String} relative directory path
+
+
 ### readFile
 
 Returns the content of the specified file.
@@ -65,3 +73,12 @@ If the specified directory does not exist, it will be created by the method - an
 Parameters
 - `filePath`: {String} relative directory path and file name
 - `content`: {Object|String} file content
+
+
+### deleteFile
+
+Removes the specified file.
+
+
+Parameter
+- `filePath`: {String} relative file path
