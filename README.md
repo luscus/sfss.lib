@@ -1,5 +1,5 @@
 # Simple FS Storage Library
-[![NPM version](https://badge.fury.io/js/sfss.lib.svg)](http://badge.fury.io/js/prototype-less)
+[![NPM version](https://badge.fury.io/js/sfss.lib.svg)](http://badge.fury.io/js/sfss.lib)
 [![dependencies](https://david-dm.org/luscus/sfss.lib.svg)](https://david-dm.org/luscus/sfss.lib)
 [![devDependency Status](https://david-dm.org/luscus/sfss.lib/dev-status.svg?theme=shields.io)](https://david-dm.org/luscus/sfss.lib#info=devDependencies)
 
